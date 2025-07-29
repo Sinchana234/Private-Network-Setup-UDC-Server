@@ -1,26 +1,23 @@
-Web Server (udc.example.com)
+# Private-Network-Setup-UDC-Server
 
-1.Install Apache and PHP.
-2.Verify PHP and start the web service.
-3.Create a test PHP page to confirm setup.
-4.Access the page via browser; adjust firewall if needed.
+## Web Server (`udc.example.com`)
+1. Install Apache and PHP.
+2. Start and verify PHP with a test page.
+3. Ensure the page loads in the browser (adjust firewall if needed).
 
-Database Server (dbsvr.example.com)
+## Database Server (`dbsvr.example.com`)
+1. Clone and rename the web server.
+2. Disable firewall and remove bridged networking.
+3. Install MySQL with UTF-8 settings.
+4. Secure MySQL and create a test database.
 
-1.Clone the web server and assign a new hostname.
-2.Disable firewall and remove bridged network.
-3.Install and configure MySQL with UTF-8 support.
-4.Secure MySQL and create a test database.
+## UDC Application Configuration
+1. Create `udc` database and grant user privileges.
+2. Verify remote access from web server.
+3. Create `users` table to store form data.
+4. Configure upload directories with appropriate permissions.
 
-UDC Application Configuration
-
-1.Create udc database and user with full access.
-2.Verify remote connection from web server.
-3.Create users table for storing form data.
-4.Set up upload directories with proper permissions.
-
-Application Functionality
-
-1.PHP page connects to database and verifies connectivity.
-2.Main application page collects user data and uploads files.
-3.Submitted data is stored in the database and files saved locally.
+## Application Workflow
+1. PHP page connects to MySQL and confirms connectivity.
+2. Main app collects user info and files.
+3. Data is stored in the DB; files saved locally.
